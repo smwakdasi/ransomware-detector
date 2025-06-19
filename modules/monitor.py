@@ -20,7 +20,7 @@ def monitor_cpu():
         kill_process(current_pid)
 
 def start_monitoring():
-    path = os.path.expanduser("~")  # Home folder
+    path = os.path.expanduser("~")  # Monitor user's home directory
     observer = Observer()
     observer.schedule(RansomwareBehaviorHandler(), path=path, recursive=True)
     observer.start()
